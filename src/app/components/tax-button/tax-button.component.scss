@@ -1,0 +1,14 @@
+:host {
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}

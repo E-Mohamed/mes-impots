@@ -1,27 +1,45 @@
-# MesImpots
+# Mes Impôts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+A very simple french income tax calculator (and not complete _-yet-_)
 
-## Development server
+# Issues
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Refactore code and architecture
+- improve style
+- Add more validation on forms
 
-## Code scaffolding
+# Known missed features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 10% tax allowance
 
-## Build
+### Donation rules
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+For donation forms (7UD and 7UF) some rules are missing:
 
-## Running unit tests
+- Donation input form is not consider in tax calcul
+- 7UD form max possible value is 1000
+- 7UF form, is 66% reduction but with max of 20% of taxable income
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Investment
 
-## Running end-to-end tests
+Many way of invest lead to tax reduction, some main of them are missing (7CI -> 18%, 7CH -> 25%)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Electric car/ charging station purchase/ installation
 
-## Further help
+### Personal service
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Some personal services like childcare fees, home maintenance and so on can lead to tax reduction
+
+# Ideas
+
+### Architecture
+
+As it's a simple app without heavy or complexy logic my proposition is something like :
+
+app/
+
+app/components/...
+
+app/services/...
+
+app.\*

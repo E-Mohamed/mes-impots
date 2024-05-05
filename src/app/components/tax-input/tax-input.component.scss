@@ -1,0 +1,8 @@
+:host {
+    appearance: textfield;
+    width: 100px;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
