@@ -2,6 +2,8 @@
 
 A very simple french income tax calculator (and not complete _-yet-_)
 
+demo [here](https://e-mohamed.github.io/mes-impots/)
+
 # Issues
 
 - Refactore code and architecture
