@@ -31,3 +31,8 @@ jobs:
           echo ====== END NPM CI ======
           echo ====== START test ======
           npm run test
+          if [[ $? != 0 ]]
+          then
+          exit 1
+          fi
+          exit 0
