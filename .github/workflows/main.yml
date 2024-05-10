@@ -26,5 +26,8 @@ jobs:
       - name: Script
         run: |
           ls
+          echo ====== START NPM CI ======
           npm ci
+          echo ====== END NPM CI ======
+          echo ====== START test ======
           npm run test:prod
