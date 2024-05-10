@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  my_job:
+    name: job's name
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v4
+      - name: Setup angular
+        run: npm install -g @angular/cli
+      - name: Setup project
+        uses: actions/checkout@v3
+      - name: Script
+        run: |
+          ls
+          echo ====== START NPM CI ======
+          npm ci
+          echo ====== END NPM CI ======
+          echo ====== START test ======
+          npm run test-ci
+          if [[ $? != 0 ]]
+          then
+          exit 1
+          fi
+          exit 0
