@@ -30,7 +30,7 @@ jobs:
           npm ci
           echo ====== END NPM CI ======
           echo ====== START test ======
-          npm run tes-ci
+          npm run test-ci
           if [[ $? != 0 ]]
           then
           exit 1
