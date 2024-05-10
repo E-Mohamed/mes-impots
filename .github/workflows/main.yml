@@ -26,6 +26,5 @@ jobs:
       - name: Script
         run: |
           ls
-          cd mes-impots
           npm i
           ng --version
