@@ -26,5 +26,5 @@ jobs:
       - name: Script
         run: |
           ls
-          npm i
-          ng --version
+          npm ci
+          npm run test:prod
