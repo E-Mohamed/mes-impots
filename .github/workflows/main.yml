@@ -4,15 +4,19 @@ on:
   push:
     branches:
       - main
+      - develop
+      - feature/*
+      - bugfix/*
 
   pull_request:
     branches:
       - main
+      - develop
 
   workflow_dispatch:
 
 jobs:
-  my_job:
+  Unit-test-check:
     name: job's name
     runs-on: ubuntu-latest
 
@@ -25,14 +29,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Script
         run: |
-          ls
           echo ====== START NPM CI ======
           npm ci
           echo ====== END NPM CI ======
           echo ====== START test ======
           npm run test-ci
-          if [[ $? != 0 ]]
-          then
-          exit 1
-          fi
-          exit 0
