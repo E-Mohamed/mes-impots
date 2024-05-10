@@ -30,4 +30,4 @@ jobs:
           npm ci
           echo ====== END NPM CI ======
           echo ====== START test ======
-          npm run test:prod
+          npm run test
